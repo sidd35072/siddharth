@@ -1,0 +1,27 @@
+//////////////////////////////////////////////
+//Media Queries
+
+// Break points
+// 400px
+// 900px
+// 1200px
+
+/*
+phone
+tablet
+tablet landscape
+desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == tablet) {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == phone) {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+}

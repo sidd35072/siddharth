@@ -1,0 +1,68 @@
+//////////////////////////////////////////////
+//FONT FAMILIES
+
+.vibes {
+  font-family: "Great Vibes", cursive;
+}
+.roboto {
+  font-family: "Roboto Slab", serif;
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.montserrat_bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.meb {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+.monoton {
+  font-family: "Monoton", cursive;
+}
+
+//////////////////////////////////////////////
+//FONT COLORS
+.white {
+  color: $white;
+}
+.light-white {
+  color: $light-white;
+}
+.grey {
+  color: $grey;
+}
+.light-black {
+  color: $light-black;
+}
+.black {
+  color: $black;
+}
+.blue {
+  color: $primary-blue;
+}
+
+//////////////////////////////////////////////
+//FONT Sizes
+.xs {
+  font-size: 2vw;
+}
+.sm {
+  font-size: 3vw;
+}
+.l {
+  font-size: 6vw;
+  @include respond(tablet) {
+    font-size: 7vw;
+  }
+  @include respond(phone) {
+    font-size: 10vw;
+  }
+}
+.xxl {
+  font-size: 15vw;
+  @include respond(phone) {
+    font-size: 16vw;
+  }
+}
