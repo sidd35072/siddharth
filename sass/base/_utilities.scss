@@ -47,9 +47,15 @@
 //FONT Sizes
 .xs {
   font-size: 2vw;
+  @include respond(phone) {
+    font-size: 6vw;
+  }
 }
 .sm {
   font-size: 3vw;
+  @include respond(phone) {
+    font-size: 10vw;
+  }
 }
 .l {
   font-size: 6vw;
