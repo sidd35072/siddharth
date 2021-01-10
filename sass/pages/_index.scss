@@ -55,3 +55,34 @@
     }
   }
 }
+
+//////////////////////////////////////////////
+//Section EXPERIENCE
+
+.experience {
+  margin-top: 3rem;
+  background-image: url(../img/experience-background.png);
+  text-align: center;
+
+  &-line {
+    border-bottom: 3px solid $white;
+    width: 83%;
+    margin: 2.5rem auto;
+  }
+  &-desc {
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////
+//Section EXPERIENCE
+
+.certifications {
+  margin-top: 3rem;
+  background-image: url(../img/certifications-background.png);
+
+  &-container {
+  }
+}

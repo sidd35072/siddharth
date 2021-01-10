@@ -65,18 +65,27 @@ body {
 
 .xxs {
   font-size: 1vw; }
+  @media (max-width: 900px) {
+    .xxs {
+      font-size: 6vw; } }
   @media (max-width: 415px) {
     .xxs {
       font-size: 6vw; } }
 
 .xs {
   font-size: 2vw; }
+  @media (max-width: 900px) {
+    .xs {
+      font-size: 6vw; } }
   @media (max-width: 415px) {
     .xs {
       font-size: 6vw; } }
 
 .sm {
   font-size: 3vw; }
+  @media (max-width: 900px) {
+    .sm {
+      font-size: 6vw; } }
   @media (max-width: 415px) {
     .sm {
       font-size: 10vw; } }
@@ -173,3 +182,19 @@ body {
       border-bottom: 3px solid white;
       width: 83%;
       margin: 2.5rem auto; }
+
+.experience {
+  margin-top: 3rem;
+  background-image: url(../img/experience-background.png);
+  text-align: center; }
+  .experience-line {
+    border-bottom: 3px solid white;
+    width: 83%;
+    margin: 2.5rem auto; }
+  @media (max-width: 415px) {
+    .experience-desc {
+      margin-top: 2rem; } }
+
+.certifications {
+  margin-top: 3rem;
+  background-image: url(../img/certifications-background.png); }

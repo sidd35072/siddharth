@@ -47,6 +47,9 @@
 //FONT Sizes
 .xxs {
   font-size: 1vw;
+  @include respond(tablet) {
+    font-size: 6vw;
+  }
   @include respond(phone) {
     font-size: 6vw;
   }
@@ -54,12 +57,18 @@
 
 .xs {
   font-size: 2vw;
+  @include respond(tablet) {
+    font-size: 6vw;
+  }
   @include respond(phone) {
     font-size: 6vw;
   }
 }
 .sm {
   font-size: 3vw;
+  @include respond(tablet) {
+    font-size: 6vw;
+  }
   @include respond(phone) {
     font-size: 10vw;
   }
