@@ -20,3 +20,17 @@ function type() {
 }
 
 type();
+
+
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".navigation");
+const list = document.querySelector(".list");
+
+burger.addEventListener("click", () => {
+  //container slide
+  nav.classList.toggle("expand");
+});
+list.addEventListener("click", () => {
+  //container slide
+  nav.classList.remove("expand");
+});

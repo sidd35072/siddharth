@@ -1,0 +1,17 @@
+//////////////////////////////////
+//PRIMARY BUTTON
+
+.btn-primary {
+  background-color: $primary-blue;
+  padding: 1.5rem;
+  //   font-size: ;
+  border: 0.2rem solid $primary-blue;
+  border-radius: 0.2rem;
+  margin: 3rem 0;
+}
+.btn-primary:hover {
+  background-color: transparent;
+  padding: 1.5rem;
+  border: 0.2rem solid $primary-blue;
+  border-radius: 0.2rem;
+}

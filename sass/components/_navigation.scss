@@ -1,0 +1,97 @@
+.navigation {
+  height: 0;
+  width: 0;
+  .burger {
+    z-index: 300;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .checkbox {
+    position: absolute;
+    left: -5000px;
+    &:not(:checked) {
+      transition-delay: calc(0.025s * (var(--length) - (var(--index) + 1)));
+    }
+  }
+
+  &-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    height: 100vh;
+    width: 0vw;
+    display: flex;
+    justify-content: center;
+    z-index: 250;
+    background-color: $primary-blue;
+    transition: all 0.4s;
+
+    .list {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      opacity: 0;
+      transform: translateX(10rem);
+      transition: all 0.4s 0.4s;
+
+      & li a,
+      span {
+        line-height: 1.8;
+        text-decoration: none;
+        color: white;
+        // font-size: 2rem;
+      }
+      .link {
+        // background-image: linear-gradient(
+        //   125deg,
+        //   transparent 0%,
+        //   transparent 50%,
+        //   $black 50%,
+        //   $black 100%
+        // );
+        // background-size: 220%;
+        // transition: all 0.2s;
+
+        opacity: 0;
+        transform: translateX(500%);
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.38, 0.42, 0, 1.14);
+        transition-property: opacity, transform;
+        transition-delay: calc(0.025s * (var(--length) - (var(--index) + 1)));
+      }
+      .link:hover {
+        background-position: 100%;
+        transform: translateX(-1rem);
+      }
+    }
+  }
+}
+.expand {
+  .burger {
+    transform: rotateZ(180deg);
+  }
+  .navigation-links {
+    width: 40vw;
+    opacity: 1;
+
+    .list {
+      opacity: 1;
+      transform: translateX(0);
+
+      .link {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: calc(0.11s * var(--index));
+      }
+    }
+
+    @include respond(phone) {
+      width: 100vw;
+    }
+  }
+}
