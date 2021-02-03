@@ -442,6 +442,7 @@ body {
     text-align: center;
     padding: 5rem; }
     .navigation-links-list li {
+      list-style: none;
       line-height: 1.6;
       transform: translate(200px, 0%);
       opacity: 0;
