@@ -1,97 +1,75 @@
 .navigation {
-  height: 0;
-  width: 0;
-  .burger {
-    z-index: 300;
-    cursor: pointer;
+  &-burger {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    z-index: 200;
+    transform: translateY(0);
   }
-  .checkbox {
-    position: absolute;
-    left: -5000px;
-    &:not(:checked) {
-      transition-delay: calc(0.025s * (var(--length) - (var(--index) + 1)));
-    }
-  }
-
   &-links {
     position: absolute;
     top: 0;
     right: 0;
-    opacity: 0;
-    text-align: center;
     height: 100vh;
-    width: 0vw;
-    display: flex;
-    justify-content: center;
-    z-index: 250;
+    width: 0;
+    opacity: 1;
+    z-index: 150;
+    overflow-y: hidden;
     background-color: $primary-blue;
-    transition: all 0.4s;
+    transition: all 0.4s 0.2s ease;
 
-    .list {
-      padding: 5rem;
+    &-list {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      opacity: 0;
-      transform: translateX(10rem);
-      transition: all 0.4s 0.4s;
+      height: 100vh;
+      text-align: center;
+      padding: 5rem;
 
-      & li a,
-      span {
-        line-height: 1.8;
-        text-decoration: none;
-        color: white;
-        // font-size: 2rem;
-      }
-      .link {
-        // background-image: linear-gradient(
-        //   125deg,
-        //   transparent 0%,
-        //   transparent 50%,
-        //   $black 50%,
-        //   $black 100%
-        // );
-        // background-size: 220%;
-        // transition: all 0.2s;
-
+      li {
+        line-height: 1.6;
+        transform: translate(200px, 0%);
         opacity: 0;
-        transform: translateX(500%);
+
+        // testing reverse
         transition-duration: 0.5s;
-        transition-timing-function: cubic-bezier(0.38, 0.42, 0, 1.14);
-        transition-property: opacity, transform;
-        transition-delay: calc(0.025s * (var(--length) - (var(--index) + 1)));
-      }
-      .link:hover {
-        background-position: 100%;
-        transform: translateX(-1rem);
+        transition-timing-function: cubic-bezier(0.17, 0.67, 0.24, 1.23);
+        transition-delay: calc(0.1s * var(--index));
+        transition-property: transform, opacity;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
       }
     }
   }
 }
+
 .expand {
-  .burger {
-    transform: rotateZ(180deg);
+  .navigation-burger {
+    transform: rotateZ(180deg) translateY(-2rem);
   }
   .navigation-links {
     width: 40vw;
     opacity: 1;
-
-    .list {
-      opacity: 1;
-      transform: translateX(0);
-
-      .link {
-        opacity: 1;
-        transform: translateX(0);
-        transition-delay: calc(0.11s * var(--index));
-      }
-    }
-
+    transition: all 0.4s ease;
     @include respond(phone) {
       width: 100vw;
+    }
+
+    &-list {
+      li {
+        transform: translate(0);
+        opacity: 1;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.17, 0.67, 0.24, 1.23);
+        transition-delay: calc(0.4s + (0.1s * var(--index)));
+        transition-property: transform, opacity;
+
+        a {
+        }
+      }
     }
   }
 }

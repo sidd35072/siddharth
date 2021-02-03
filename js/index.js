@@ -22,9 +22,9 @@ function type() {
 type();
 
 
-const burger = document.querySelector(".burger");
+const burger = document.querySelector(".navigation-burger");
 const nav = document.querySelector(".navigation");
-const list = document.querySelector(".list");
+const list = document.querySelector(".navigation-links-list");
 
 burger.addEventListener("click", () => {
   //container slide
@@ -32,5 +32,18 @@ burger.addEventListener("click", () => {
 });
 list.addEventListener("click", () => {
   //container slide
+  nav.classList.remove("expand");
+});
+
+document.querySelector("header").addEventListener('click', (e)=>{
+  console.log(e);
+  nav.classList.remove("expand");
+});
+document.querySelector("main").addEventListener('click', (e)=>{
+  console.log(e);
+  nav.classList.remove("expand");
+});
+document.querySelector("body").addEventListener('scroll', (e)=>{
+  console.log(e);
   nav.classList.remove("expand");
 });
