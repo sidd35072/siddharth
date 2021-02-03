@@ -54,6 +54,9 @@
     width: 40vw;
     opacity: 1;
     transition: all 0.4s ease;
+    @include respond(tablet) {
+      width: 100vw;
+    }
     @include respond(phone) {
       width: 100vw;
     }

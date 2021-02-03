@@ -7,11 +7,33 @@
   //   font-size: ;
   border: 0.2rem solid $primary-blue;
   border-radius: 0.2rem;
-  margin: 3rem 0;
+  margin: 1.7rem auto;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
 }
 .btn-primary:hover {
   background-color: transparent;
   padding: 1.5rem;
   border: 0.2rem solid $primary-blue;
   border-radius: 0.2rem;
+}
+
+//////////////////////////////////
+//SECONDARY BUTTON
+.btn-secondary {
+  background-color: transparent;
+  color: $primary-blue;
+  padding: 0.1rem 1rem;
+  font-size: 2rem;
+  border-bottom: 0.1rem solid $primary-blue;
+  // border-radius: 0.2rem;
+  margin: 1.7rem auto;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: $primary-blue;
+  color: $white;
 }

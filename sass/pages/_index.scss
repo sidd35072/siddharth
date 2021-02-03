@@ -70,6 +70,7 @@
     margin: 2.5rem auto;
   }
   &-desc {
+    padding: 0 1rem;
     @include respond(phone) {
       margin-top: 2rem;
     }
@@ -80,7 +81,7 @@
 //Section EXPERIENCE
 
 .certifications {
-  margin-top: 3rem;
+  margin-top: 5rem;
   background-image: url(../img/certifications-background.png);
 
   &-container {
@@ -90,16 +91,18 @@
 
     .certificate {
       text-align: center;
+      background-color: $white;
+      box-shadow: 9px 9px 32px $primary-blue;
+      margin-bottom: 3rem;
+      border-radius: 0.5rem;
+      display: flex;
+      flex-direction: column;
 
       &-title {
+        display: inline-block;
+        // padding-top: 2rem;
+        margin: 2rem auto;
         color: $primary-blue;
-        font-size: 2rem;
-      }
-      &-img {
-        transition: all 0.2s;
-      }
-      &-img:hover {
-        transform: scale(1.1);
       }
     }
   }
@@ -109,6 +112,7 @@
 //Section STORY
 
 .story {
+  margin-top: 7rem;
   background-image: url(../img/story.png);
   background-size: contain;
   // background-repeat: no-repeat;

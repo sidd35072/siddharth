@@ -2,12 +2,14 @@
   padding: 0 2rem;
 
   &-row {
+    overflow-y: hidden;
   }
 
   &-header {
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow-y: hidden;
 
     & * {
       margin: 0 auto;
