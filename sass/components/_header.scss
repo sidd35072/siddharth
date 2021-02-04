@@ -1,5 +1,4 @@
 .header {
-  // height: 100vh;
   .social-links-left {
     position: absolute;
     bottom: 0;
@@ -50,16 +49,17 @@
     }
   }
   &-btm {
+    & > * {
+      margin-top: 2rem;
+    }
     text-align: center;
     position: relative;
-    // height: 50vh;
+
     display: flex;
     flex-direction: column;
-    // justify-content: space-evenly;
 
     @include respond(phone) {
       transform: translate(0, -15vh);
-      // height: 60vh;
     }
     .social-links-left {
       position: absolute;
@@ -86,12 +86,6 @@
       }
     }
   }
-  // &-button {
-  //   position: absolute;
-  //   bottom: 2rem;
-  //   left: 2rem;
-  //   transform: translate(50%, 0%);
-  // }
 }
 .fab,
 .fas,
