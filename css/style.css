@@ -354,9 +354,59 @@ body {
   background-color: #0084ba;
   color: white; }
 
-.header {
-  height: 100vh; }
-  .header .social-links-left {
+.header .social-links-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem;
+  z-index: 100; }
+  .header .social-links-left a {
+    margin-top: 2rem; }
+
+.header .social-links-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem;
+  z-index: 100; }
+  .header .social-links-right a {
+    margin-top: 2rem; }
+
+.header .logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 22rem; }
+  @media (max-width: 900px) {
+    .header .logo {
+      width: 18rem; } }
+  @media (max-width: 430px) {
+    .header .logo {
+      width: 15rem; } }
+
+.header-top {
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../img/bgg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+  @media (max-width: 430px) {
+    .header-top {
+      background-image: url(../img/bg.png); } }
+
+.header-btm {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 430px) {
+    .header-btm {
+      transform: translate(0, -15vh); } }
+  .header-btm .social-links-left {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -364,9 +414,9 @@ body {
     flex-direction: column;
     margin: 2rem 2rem;
     z-index: 100; }
-    .header .social-links-left a {
+    .header-btm .social-links-left a {
       margin-top: 2rem; }
-  .header .social-links-right {
+  .header-btm .social-links-right {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -374,36 +424,8 @@ body {
     flex-direction: column;
     margin: 2rem 2rem;
     z-index: 100; }
-    .header .social-links-right a {
+    .header-btm .social-links-right a {
       margin-top: 2rem; }
-  .header .logo {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 22rem; }
-    @media (max-width: 900px) {
-      .header .logo {
-        width: 18rem; } }
-    @media (max-width: 430px) {
-      .header .logo {
-        width: 15rem; } }
-  .header-top {
-    width: 100vw;
-    height: 50vh;
-    background-image: url(../img/bgg.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat; }
-    @media (max-width: 430px) {
-      .header-top {
-        background-image: url(../img/bg.png); } }
-  .header-btm {
-    transform: translateY(0, -10vh);
-    text-align: center;
-    position: relative;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; }
 
 .fab,
 .fas,
