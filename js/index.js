@@ -18,7 +18,7 @@ function type() {
     index++;
 
     setTimeout(type, 1000);
-  } else setTimeout(type, 250);
+  } else setTimeout(type, 150);
 }
 
 type();
