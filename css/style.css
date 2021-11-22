@@ -627,5 +627,10 @@ body {
     .story .mystory-text {
       margin-bottom: 3rem; }
 
+.connect {
+  margin-top: 7rem; }
+  .connect .row .test {
+    height: 50vh; }
+
 footer {
   text-align: center; }
